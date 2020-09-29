@@ -1,21 +1,21 @@
 <h1>Eat-A-Burger!</h1>
 
-<h2>burgers that are not sleepy!</h2>
+<h2>burgers that are not devoured!</h2>
 
 <ul>
     {{#each burgers}}
-    {{#unless sleepy}}
-    {{> burgers/burger-block sleep=true}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devoured=true}}
     {{/unless}}
     {{/each}}
 </ul>
 
-<h2>burgers that are sleepy!</h2>
+<h2>burgers that are devoured!</h2>
 
 <ul>
     {{#each burgers}}
-    {{#if sleepy}}
-    {{> burgers/burger-block sleep=false}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=false}}
     {{/if}}
     {{/each}}
 </ul>
