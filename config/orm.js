@@ -1,4 +1,5 @@
 var connection = require("../config/connection.js");
+const burger = require("../models/burger.js");
 
 function printQuestionMarks(num) {
   var arr = [];
@@ -30,8 +31,8 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function (table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+  insertOne: function (tableInput, cols, vals, cb) {
+    var queryString = "INSERT INTO " + tableInput;
 
     queryString += " (";
     queryString += cols.toString();
