@@ -3,30 +3,23 @@
 <h2>burgers that are not devoured!</h2>
 
 <ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
+    {{#each burger_name}}
+    <p>{{id}}. {{burger_name}} <button type="submit" id="devour" action="/api/burgers/:id" method="PUT">Devour</button>
+    </p>
     {{/each}}
-</ul>
 
-<h2>burgers that are devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
 </ul>
+{{!-- //this would be where the burgers would be separated if they were devoured or not and have thier own button. I tried to emulate the if function but had trouble duplicating.> --}}
 
 <h2>Enter a burger you want to eat, then click Submit</h2>
-<form class="create-form">
+<form class="create-form" action="/api/burgers" method="POST">
 
     <div class="form-group">
         <label for="ca">Burger Name:</label>
         <input type="text" id="ca" name="name">
     </div>
 
-    <button type="submit">Add burger</button>
+    <button type="submit" id="addburger">Add burger</button>
 </form>
+
+{{!-- this would then post to the burgers api --}}
