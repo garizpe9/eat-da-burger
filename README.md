@@ -4,4 +4,6 @@ This is an attempt at the homework and an attempt at Full Stack Development with
 
 Any advice on how to fix the issues are appreciated and can be sent to veliaarizpe@gmail.com
 
+To download, just fork or clone from the repository from github.
+
 This uses node, mysql database and mysql node package, and express
