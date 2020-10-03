@@ -5,7 +5,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 router.get("/", function (req, res) {
-  burger.selectAll(function (data) {
+  burger.all(function (data) {
     //calls to burger.js to get the function for ORM and creates into JSON
     var hbsObject = {
       burger_name: data,
@@ -16,7 +16,7 @@ router.get("/", function (req, res) {
 });
 //This would post the information that is in the submit button for the burger and would also show the burgers in this url
 router.post("/api/burgers", function (req, res) {
-  burger.insertOne(
+  burger.create(
     ["burger_name", "devoured"],
     [req.body.burger_name, req.body.devour],
     function (result) {
@@ -32,7 +32,7 @@ router.put("/api/burgers/:id", function (req, res) {
 
   console.log("condition", condition);
 
-  burger.updateOne(
+  burger.update(
     {
       devour: req.body.devour,
     },
