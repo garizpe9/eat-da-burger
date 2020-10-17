@@ -1,4 +1,3 @@
-$(function () {
   $(".submit").on("click", function (event) {
     ///update buttons so that clicks it is the devoured
     var id = $(this).data("id");
@@ -18,6 +17,7 @@ $(function () {
       location.reload();
     });
   });
+
 
 $("#addburger").on("click", function (event) {
   // Make sure to preventDefault on a submit event.
@@ -39,4 +39,4 @@ $("#addburger").on("click", function (event) {
   location.reload();
   // });
 });
-});
+
