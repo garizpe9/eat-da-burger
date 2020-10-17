@@ -18,4 +18,25 @@ $(function () {
       location.reload();
     });
   });
+
+$("#addburger").on("click", function (event) {
+  // Make sure to preventDefault on a submit event.
+
+  event.preventDefault();
+  console.log("hello");
+  // var newburger = {
+  //   name: $("#ca").val().trim(),
+  //   devoured: 0,
+  // };
+
+  // // Send the POST request.
+  // $.ajax("/api/burgers", {
+  //   type: "POST",
+  //   data: newburger,
+  // }).then(function () {
+  //   console.log("created new cat");
+  // Reload the page to get the updated list
+  location.reload();
+  // });
+});
 });
