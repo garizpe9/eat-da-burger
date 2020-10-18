@@ -1,5 +1,4 @@
 const db = require("../models");
-const { Op } = require("sequelize");
 module.exports = function (app) {
     app.get("/api/burger/", function (req, res) {
         db.burger.findAll({}).then(function (fishPost) {
