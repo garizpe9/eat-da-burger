@@ -1,18 +1,13 @@
 ###
 Schema
 
-CREATE DATABASE burgers_db;
-
-USE burgers_db;
-
-CREATE TABLE burgers
+use burgers_db;
+create table burgers
 (
-    id int NOT NULL
-    AUTO_INCREMENT,
-	burger_name varchar
-    (255) NOT NULL,
-    devoured BOOLEAN,
-	PRIMARY KEY
-    (id),
-
-);
+	id int not null
+	auto_increment,
+burger_name varchar
+	(255) Not Null,
+devoured Boolean Default false,
+primary key
+	(id));
