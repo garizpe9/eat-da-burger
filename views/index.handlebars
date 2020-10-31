@@ -15,16 +15,17 @@
         {{/each}}
       </p>
     </div>
-  </div>
-  <div class="col-6">
-    <h2>Burgers that have been devoured!</h2>
-    <p>
-      {{#each burgers}}
-      {{#if this.devoured}}
-      {{> burgers/burger-block devour=false}}
-      {{/if}}
-      {{/each}}
-    </p>
+
+    <div class="col-6">
+      <h2>Burgers that have been devoured!</h2>
+      <p>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        {{> burgers/burger-block devour=false}}
+        {{/if}}
+        {{/each}}
+      </p>
+    </div>
   </div>
 
 
