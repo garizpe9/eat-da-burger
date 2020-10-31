@@ -1,28 +1,34 @@
 <h1>Eat-Da-Burger</h1>
 
 <div class="container">
-  <div>
-    <div>
+  <div class="row">
+    <div class="col-12">
       <h2>Burgers to Eat!</h2>
-      <p>
-        {{#each burgers}}
-        {{#unless this.devoured}}
-        {{> burgers/burger-block devour=true}}
-        {{/unless}}
-        {{/each}}
-      </p>
-    </div>
+      <div class="row">
+        <div class="col-6">
+          <p>
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            {{> burgers/burger-block devour=true}}
+            {{/unless}}
+            {{/each}}
+          </p>
+        </div>
 
-    <div>
-      <h2>Burgers that have been devoured!</h2>
+        <div class="col-6">
 
-      <p>
-        {{#each burgers}}
-        {{#if this.devoured}}
-        {{> burgers/burger-block devour=false}}
-        {{/if}}
-        {{/each}}
-      </p>
+          <h2>Burgers that have been devoured!</h2>
+
+          <p>
+            {{#each burgers}}
+            {{#if this.devoured}}
+            {{> burgers/burger-block devour=false}}
+            {{/if}}
+            {{/each}}
+          </p>
+
+        </div>
+      </div>
     </div>
   </div>
 
@@ -34,10 +40,6 @@
       <label for="ca">Burger Name:</label>
       <input type="text" id="ca" name="name">
     </div>
-
-    {{!-- <div class="form-group">
-      <input type="radio" name="devoured" value="0"> Make New Burger
-    </div> --}}
 
     <button type="submit" name="devoured" value="0">Add Burger</button>
   </form>
